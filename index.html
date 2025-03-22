@@ -13,16 +13,16 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background: #121212;
-            color: white;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #333;
             text-align: center;
             overflow-x: hidden;
         }
         header {
-            background: #1f1f1f;
+            background: #343a40;
+            color: white;
             padding: 20px;
-            text-align: center;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 600;
         }
         nav {
@@ -30,7 +30,7 @@
             justify-content: center;
             gap: 20px;
             padding: 15px;
-            background: #333;
+            background: #6c757d;
         }
         nav a {
             color: white;
@@ -39,13 +39,13 @@
             transition: 0.3s;
         }
         nav a:hover {
-            color: #00aaff;
+            color: #ffc107;
         }
         .hero {
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         .hero h1 {
-            font-size: 40px;
+            font-size: 42px;
         }
         .hero p {
             font-size: 20px;
@@ -55,47 +55,55 @@
             display: inline-block;
             margin-top: 20px;
             padding: 12px 25px;
-            background: #00aaff;
-            color: white;
+            background: #ffc107;
+            color: #343a40;
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
         }
         .btn:hover {
-            background: #0088cc;
+            background: #e0a800;
         }
-        .projects {
-            padding: 40px 20px;
+        .projects, .experience, .skills, .contact {
+            padding: 50px 20px;
         }
-        .projects h2 {
-            font-size: 30px;
+        .projects h2, .experience h2, .skills h2, .contact h2 {
+            font-size: 32px;
             margin-bottom: 20px;
         }
-        .project {
-            background: #1f1f1f;
+        .project, .experience-item, .skill-item {
+            background: white;
             margin: 20px auto;
             padding: 20px;
-            max-width: 600px;
+            max-width: 700px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .experience {
-            padding: 40px 20px;
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
         }
-        .experience h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        .experience-item {
-            background: #1f1f1f;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        .contact-form button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background: #218838;
         }
         footer {
-            background: #222;
+            background: #343a40;
+            color: white;
             padding: 20px;
             margin-top: 40px;
             font-size: 14px;
@@ -108,6 +116,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
     <section class="hero">
@@ -125,10 +134,6 @@
             <h3>Data Science for Predictive Analysis</h3>
             <p>Built machine learning models to predict satellite failures.</p>
         </div>
-        <div class="project">
-            <h3>Brain Builders Game</h3>
-            <p>Designed a Python-based educational game to make learning fun.</p>
-        </div>
     </section>
     <section class="experience" id="experience">
         <h2>My Experience</h2>
@@ -136,17 +141,31 @@
             <h3>Student Work Experience Program - Covenant University</h3>
             <p>Hands-on training in electrical wiring, solar installations, CCTV, networking, and programming.</p>
         </div>
-        <div class="experience-item">
-            <h3>AI Hackathon Participant</h3>
-            <p>Developed innovative AI/ML solutions with a team to tackle real-world problems.</p>
+    </section>
+    <section class="skills" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-item">
+            <h3>Programming</h3>
+            <p>Python, C++, MATLAB, JavaScript</p>
         </div>
-        <div class="experience-item">
-            <h3>Data Science Internship at CodeAlpha</h3>
-            <p>Worked on predictive modeling and data-driven insights.</p>
+        <div class="skill-item">
+            <h3>Engineering Tools</h3>
+            <p>Autodesk Fusion 360, CAD/CAM, SolidWorks</p>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
     <footer>
-        <p>Connect with me: <a href="www.linkedin.com/in/praise-adeyeye" target="_blank">LinkedIn</a> | <a href="https://github.com/PRAISE-ADEYEYE" target="_blank">GitHub</a></p>
+        <p>Connect with me: <a href="https://linkedin.com/in/praise-adeyeye" target="_blank">LinkedIn</a> | <a href="https://github.com/PRAISE-ADEYEYE" target="_blank">GitHub</a></p>
         <p>&copy; 2025 Praise. All Rights Reserved.</p>
     </footer>
 </body>
