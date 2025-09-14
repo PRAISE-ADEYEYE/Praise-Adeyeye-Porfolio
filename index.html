@@ -1,172 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praise Adeyeye | Aerospace & Data Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        header {
-            background: #343a40;
-            color: white;
-            padding: 20px;
-            font-size: 26px;
-            font-weight: 600;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            background: #6c757d;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ffc107;
-        }
-        .hero {
-            padding: 60px 20px;
-        }
-        .hero h1 {
-            font-size: 42px;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #ffc107;
-            color: #343a40;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #e0a800;
-        }
-        .projects, .experience, .skills, .contact {
-            padding: 50px 20px;
-        }
-        .projects h2, .experience h2, .skills h2, .contact h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .project, .experience-item, .skill-item {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 700px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form {
-            max-width: 500px;
-            margin: auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            padding: 10px 20px;
-            background: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .contact-form button:hover {
-            background: #218838;
-        }
-        footer {
-            background: #343a40;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praise Adeyeye | Portfolio</title>
+  <style>
+    /* ---------- GLOBAL STYLES ---------- */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #0b0c28;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    #galaxy {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 30, 0.7);
+      padding: 1em;
+      z-index: 100;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #9a7dff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff7df0;
+    }
+
+    .section {
+      padding: 100px 20px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      color: #e0d4ff;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #b693ff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    .highlight {
+      color: #ff7df0;
+      font-weight: bold;
+    }
+
+    /* Placeholder sections for later */
+    .placeholder {
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: rgba(0, 0, 30, 0.85);
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <header>Praise Adeyeye | Aerospace & Data Science</header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>🚀 Aerospace Enthusiast | 📊 Data Scientist | 🔥 Problem Solver | 💡 Research Enthusiast</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-    <section class="projects" id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Aerospace Simulation Model</h3>
-            <p>Developed a flight dynamics simulation using Python & MATLAB.</p>
-        </div>
-        <div class="project">
-            <h3>Data Science for Predictive Analysis</h3>
-            <p>Built machine learning models to predict satellite failures.</p>
-        </div>
-    </section>
-    <section class="experience" id="experience">
-        <h2>My Experience</h2>
-        <div class="experience-item">
-            <h3>Student Work Experience Program - Covenant University</h3>
-            <p>Hands-on training in electrical wiring, solar installations, CCTV, networking, and programming.</p>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skill-item">
-            <h3>Programming</h3>
-            <p>Python, C++, MATLAB, JavaScript</p>
-        </div>
-        <div class="skill-item">
-            <h3>Engineering Tools</h3>
-            <p>Autodesk Fusion 360, CAD/CAM, SolidWorks</p>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <p>Connect with me: <a href="https://linkedin.com/in/praise-adeyeye" target="_blank">LinkedIn</a> | <a href="https://github.com/PRAISE-ADEYEYE" target="_blank">GitHub</a></p>
-        <p>&copy; 2025 Praise. All Rights Reserved.</p>
-    </footer>
+  <!-- 🌌 Galaxy Background -->
+  <canvas id="galaxy"></canvas>
+
+  <!-- 🔝 Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🎯 Hero Section -->
+  <section id="hero" class="section">
+    <div class="content">
+      <h1 class="animate-title">Praise Adeyeye</h1>
+      <p class="animate-subtitle">
+        <span class="highlight">Aerospace & Data Science Enthusiast</span>  
+        | Mechanical Engineering @ Covenant University |  
+        Research-Driven Innovator 🚀
+      </p>
+    </div>
+  </section>
+
+  <!-- 🙋 About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am an aspiring Aerospace Engineer and Data Scientist passionate about merging  
+      <span class="highlight">innovation</span> with <span class="highlight">data-driven insights</span>.  
+      My academic journey in Mechanical Engineering at Covenant University fuels my interest in research,  
+      engineering systems, and advanced computational analysis. I am focused on creating  
+      real-world solutions across <span class="highlight">engineering, data, and technology</span>.
+    </p>
+  </section>
+
+  <!-- 🛠 Skills -->
+  <section id="skills" class="section">
+    <h2>Top Skills</h2>
+    <ul>
+      <li>Systems Engineering</li>
+      <li>MATLAB</li>
+      <li>Python</li>
+      <li>Data Analytics & Visualization</li>
+      <li>Machine Learning</li>
+      <li>Research & Technical Writing</li>
+    </ul>
+  </section>
+
+  <!-- 🏅 Certifications (Scrolling Carousel later) -->
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <p class="placeholder">✨ [Placeholder] A horizontal scrolling carousel of certifications will be added here later.</p>
+    <!-- TODO: Add certifications carousel (auto-scroll horizontally with logos and titles) -->
+  </section>
+
+  <!-- 📂 Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <p class="placeholder">
+      ✨ [Placeholder] A showcase of projects with links and images will be added here later.  
+      Example: AI-powered Sound Analyzer, Invisibility Cloak with OpenCV, Mass-Spring System Analyzer...
+    </p>
+    <!-- TODO: Add project cards with images, titles, and links -->
+  </section>
+
+  <!-- 💼 Experience -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <p>
+      <b>Dangote Cement Plc</b> (Mechanical Trainee) – Hands-on experience in large-scale industrial systems.<br>
+      <b>FlexiSAF</b> (Data Science Intern) – Built solutions leveraging Python and data tools.<br>
+      <b>Oasis Infobyte</b> (Internship) – Worked on data projects and technical problem solving.
+    </p>
+  </section>
+
+  <!-- 📩 Contact -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>
+      Connect with me on  
+      <a href="https://linkedin.com/in/praise-adeyeye" target="_blank">LinkedIn</a> |  
+      <a href="https://github.com/praise-adeyeye" target="_blank">GitHub</a> |  
+      <span class="highlight">Email:</span> praiseadeyeye@example.com
+    </p>
+  </section>
+
+  <!-- 👣 Footer -->
+  <footer>
+    © 2025 Praise Adeyeye | Built with passion ✨
+  </footer>
+
+  <!-- ---------- SCRIPTS ---------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // 🌌 Galaxy Background with purple/blue stars
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("galaxy"), antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Stars
+    function addStar() {
+      const geometry = new THREE.SphereGeometry(0.15, 24, 24);
+      const material = new THREE.MeshBasicMaterial({ color: 0xaaaaff });
+      const star = new THREE.Mesh(geometry, material);
+
+      const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200));
+      star.position.set(x, y, z);
+      scene.add(star);
+    }
+    Array(3000).fill().forEach(addStar);
+
+    camera.position.z = 5;
+
+    // Animate galaxy
+    function animate() {
+      requestAnimationFrame(animate);
+      scene.rotation.y += 0.0005;
+      scene.rotation.x += 0.0002;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize
+    window.addEventListener("resize", () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+
+    // ✨ GSAP Animations
+    gsap.from(".animate-title", { duration: 2, y: -50, opacity: 0, ease: "power4.out" });
+    gsap.from(".animate-subtitle", { duration: 2, y: 50, opacity: 0, delay: 0.5, ease: "power4.out" });
+    gsap.utils.toArray("section").forEach(section => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        ease: "power2.out"
+      });
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </body>
 </html>
